@@ -10,8 +10,4 @@
 		or die("Could not select database");
 	
 	session_start();
-	// $result = mysql_query("SELECT * FROM question");
-	// while ($row = mysql_fetch_array($result)) {
-	   // echo "ID:".$row{'id'}." Name:".$row{'question'}."<br>";
-	// }
 ?>
