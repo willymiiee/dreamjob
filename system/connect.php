@@ -8,6 +8,4 @@
 		
 	$selected = mysql_select_db("hrd",$conn) 
 		or die("Could not select database");
-	
-	session_start();
 ?>
