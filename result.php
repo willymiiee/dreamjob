@@ -1,3 +1,25 @@
+<?php
+	session_start();
+	if (isset($_POST['hasil']))
+		$_SESSION["jawaban"] = $_SESSION["jawaban"] . $_POST['answer'];
+
+	if (substr_count($_SESSION["jawaban"], 'E') >= 2)
+		$sifat = "E";
+	else if (substr_count($_SESSION["jawaban"], 'I') >= 2)
+		$sifat = "I";
+	if (substr_count($_SESSION["jawaban"], 'S') >= 2)
+		$sifat = $sifat . "S";
+	else if (substr_count($_SESSION["jawaban"], 'N') >= 2)
+		$sifat = $sifat . "N";
+	if (substr_count($_SESSION["jawaban"], 'F') >= 2)
+		$sifat = $sifat . "F";
+	else if (substr_count($_SESSION["jawaban"], 'T') >= 2)
+		$sifat = $sifat . "T";
+	if (substr_count($_SESSION["jawaban"], 'P') >= 2)
+		$sifat = $sifat . "P";
+	else if (substr_count($_SESSION["jawaban"], 'J') >= 2)
+		$sifat = $sifat . "J";	
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -10,6 +32,9 @@
 <body>
 	<div class="container">
 		<!-- ISTJ -->
+<?php
+	if ($sifat == "ISTJ") {
+?>
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
             <div class="jdl-resul">ISTJ (Bertanggungjawab)</div>
@@ -25,7 +50,10 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Bidang Manajemen, Polisi, Intelijen, Hakim, Pengacara, Dokter, Akuntan (Staf Keuangan), Programmer atau yang berhubungan dengan IT, System Analys, Pemimpin Militer</div>
         </div>
-
+<?php
+	}
+	else if ($sifat == "ISFJ") {
+?>
 		<!-- ISFJ -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
@@ -41,7 +69,10 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Architect, Interior Designer, Perawat, Administratif, Designer, Child Care, Konselor, Back Office Manager, Penjaga Toko / Perpustakaan, Dunia Perhotelan.</div>
         </div>
-
+<?php
+	}
+	else if ($sifat == "ISTP") {
+?>
 		<!-- ISTP -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
@@ -59,7 +90,10 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Polisi, Ahli Forensik, Programmer, Ahli Komputer, System Analyst, Teknisi, Insinyur, Mekanik, Pilot, Atlit, Entrepreneur</div>
         </div>
-
+<?php
+	}
+	else if ($sifat == "ISFP") {
+?>
 		<!-- ISFP -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
@@ -76,7 +110,10 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Seniman, Designer, Pekerja Sosial, Konselor, Psikolog, Guru, Aktor, Bidang Hospitality</div>
         </div>
-
+<?php
+	}
+	else if ($sifat == "INFJ") {
+?>
 		<!-- INFJ -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
@@ -93,7 +130,10 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Pengajar, Psikolog, Dokter, Konselor, Pekerja Sosial, Fotografer, Seniman, Designer, Child Care.</div>
         </div>
-
+<?php
+	}
+	else if ($sifat == "INTJ") {
+?>
 		<!-- INTJ -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
@@ -111,7 +151,10 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Peneliti, Ilmuwan, Insinyur, Teknisi, Pengajar, Profesor, Dokter, Research & Development, Business Analyst, System Analyst, Pengacara, Hakim, Programmers, Posisi Strategis dalam organisasi.</div>
         </div>
-
+<?php
+	}
+	else if ($sifat == "INFP") {
+?>
 		<!-- INFP -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
@@ -128,7 +171,10 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Penulis, Sastrawan, Konselor, Psikolog, Pengajar, Seniman, Rohaniawan, Bidang Hospitality</div>
         </div>
-
+<?php
+	}
+	else if ($sifat == "INTP") {
+?>
 		<!-- INTP -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
@@ -145,7 +191,10 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Ilmuwan, Fotografer, Programmer, Ahli komputer, System Analyst, Penulis Buku Teknis, Ahli Forensik, Jaksa, Pengacara, Teknisi</div>
         </div>
-
+<?php
+	}
+	else if ($sifat == "ESTP") {
+?>
 		<!-- ESTP -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
@@ -162,7 +211,10 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Marketing, Sales, Polisi, Entrepreneur, Pialang Saham, Technical Support</div>
         </div>
-
+<?php
+	}
+	else if ($sifat == "ESFP") {
+?>
 		<!-- ESFP -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
@@ -179,7 +231,10 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Entertainer, Seniman, Marketing, Konselor, Designer, Tour Guide, Bidang Anak-anak, Bidang Hospitality</div>
         </div>
-
+<?php
+	}
+	else if ($sifat == "ENFP") {
+?>
 		<!-- ENFP -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
@@ -196,7 +251,10 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Konselor, Psikolog, Entertainer, Pengajar, Motivator, Presenter, Reporter, MC, Seniman, Hospitality</div>
         </div>
-
+<?php
+	}
+	else if ($sifat == "ENTP") {
+?>
 		<!-- ENTP -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
@@ -213,7 +271,10 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Pengacara, Psikolog, Konsultan, Ilmuwan, Aktor,Marketing, Programmer, Fotografer</div>
         </div>
-
+<?php
+	}
+	else if ($sifat == "ESTJ") {
+?>
 		<!-- ESTJ -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
@@ -231,7 +292,10 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Militer, Manajer, Polisi, Hakim, Pengacara, Guru, Sales, Auditor, Akuntan, System Analyst</div>
         </div>
-
+<?php
+	}
+	else if ($sifat == "ESFJ") {
+?>
 		<!-- ESFJ -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
@@ -248,7 +312,10 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Perencana Keuangan, Perawat, Guru, Bidang anak-anak, Konselor, Administratif, Hospitality</div>
         </div>
-
+<?php
+	}
+	else if ($sifat == "ENFJ") {
+?>
 		<!-- ENFJ -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
@@ -265,7 +332,10 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Konsultan, Psikolog, Konselor, Pengajar, Marketing, HRD, Event Coordinator, Entertainer, Penulis, Motivator</div>
         </div>
-
+<?php
+	}
+	else if ($sifat == "ENTJ") {
+?>
 		<!-- ENTJ -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
@@ -283,7 +353,9 @@
             <div class="jdl-resul">Saran Profesi</div>
             <div class="desc-resul">Entrepreneur, Pengacara, Hakim, Konsultan, Pemimpin Organisasi, Business analyst, Bidang Finansial</div>
         </div>
-
+<?php
+	}
+?>
         <div class="ctn-result2">
         	RESULT
         </div>
