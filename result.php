@@ -2,6 +2,10 @@
 	session_start();
 	if (isset($_POST['hasil']))
 		$_SESSION["jawaban"] = $_SESSION["jawaban"] . $_POST['answer'];
+	else {
+		header("Location: index.php");
+		die();
+	}
 
 	if (substr_count($_SESSION["jawaban"], 'E') >= 2)
 		$sifat = "E";
@@ -23,6 +27,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta property="og:type" content="kompaskariertest:hasil">
+<meta property="og:title" content="Tes Karir di Kompas Karier Fair" />
+<meta property="og:description" content="ngene ya" />
+<meta property="og:url" content="http://www.kompaskarier.com/kkf" />
+<meta property="og:image" content="http://www.kompaskarier.com/assets/kkf/2014/images/kkf-logo.gif" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet">
 <link href="fs/css/font-awesome.css" rel="stylesheet">
@@ -30,6 +39,23 @@
 
 </head>
 <body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '577324325704291',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 	<div class="container">
 		<!-- ISTJ -->
 <?php
@@ -363,12 +389,15 @@
         
 	  <div style="width:810px;">	
           <div class="ctn-share">Share Your Result:</div>
-          <div class="sharefbt"><a href="#"><img src="images/ico_fb.gif" /></a></div>
-          <div class="sharefbt"><a href="#"><img src="images/ico_tw.gif" /></a></div>
+          <div class="sharefbt">
+			<a href="#" onclick="window.open('http://www.facebook.com/sharer.php?s=100&p[title]=tes_karir&p[summary]=ngene_deskripsine&p[url]=muincik', 'newwindow', 'width=640, height=300');">
+				<img src="images/ico_fb.gif" />
+			</a>
+		  </div>
+		  <div class="sharefbt"><a href="https://twitter.com/intent/tweet?button_hashtag=KompasKarierFair&text=Aku%20bisa%20tahu%20sifat%20kepribadianku%20dan%20profesi%20yang%20cocok%20di%20Kompas%20Karier%20Fair.%20Bagaimana%20dengan%20kamu%3F"><img src="images/ico_tw.gif" /></a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>  </div>
           <div class="balik"><a href="index.php">Back To Start  <i class="fa fa-chevron-circle-right"></i></a> </div>
           <div class="clearit"></div>
-      </div> 
-       
+      </div>        
     </div>
 </body>
 </html>
