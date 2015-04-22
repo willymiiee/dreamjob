@@ -41,7 +41,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet">
 <link href="fs/css/font-awesome.css" rel="stylesheet">
-<title>Tes Digital</title>
+<title>Tes Kepribadian Kompas Kareir Fair</title>
 
 </head>
 <body>

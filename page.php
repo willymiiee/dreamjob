@@ -12,7 +12,7 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="fs/css/font-awesome.css" rel="stylesheet">
 <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
-<title>Tes Digital</title>
+<title>Tes Kepribadian Kompas Kareir Fair</title>
 
 </head>
 <body>
@@ -125,7 +125,7 @@
                         <input id="23" type="radio" name="answer" value="J" required>
                         <label for="23">Terencana</label><br />
                         <input id="24" type="radio" name="answer" value="P" required>
-                        <label for="24">Spotan</label><br />
+                        <label for="24">Spontan</label><br />
 					<?php
 						}
 					?>
