@@ -1,7 +1,13 @@
 <?php
 	session_start();
-	if (isset($_POST['hasil']))
-		$_SESSION["jawaban"] = $_SESSION["jawaban"] . $_POST['answer'];
+	$trakhir = rand(1,2);
+	if ($trakhir == 1)
+		$_SESSION["jawaban"] = $_SESSION["jawaban"] . 'J';
+	else
+		$_SESSION["jawaban"] = $_SESSION["jawaban"] . 'P';
+
+	// if (isset($_POST['hasil']))
+		// $_SESSION["jawaban"] = $_SESSION["jawaban"] . $_POST['answer'];
 	// else {
 		// header("Location: index.php");
 		// die();
@@ -57,10 +63,10 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 	<div class="container">
-		<!-- ISTJ -->
 <?php
 	if ($sifat == "ISTJ") {
 ?>
+		<!-- ISTJ -->
 		<div class="ctn-result1">
 			<div class="tp">Tipe Kepribadianmu</div>
             <div class="jdl-resul">ISTJ (Bertanggungjawab)</div>

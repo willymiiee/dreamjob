@@ -75,9 +75,13 @@
 		</form>
         </div>
     </div>
+<div id="loading"><img src="images/ajax-loader.gif" alt="" /></div>
 <script type="text/javascript">
+	$(document).ready(function() {
+		$("#loading").hide();
+	});
 	$( "#kuis" ).submit(function( event ) {
-	  alert( "Handler for .submit() called." );
+	  $("#loading").show();
 	  var form = this;
 	  event.preventDefault();
 	  setTimeout(function() {
