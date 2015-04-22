@@ -46,7 +46,7 @@ input[type=radio]:checked + label:before {
 }
 .nxf { position:absolute; bottom: 32px; right: 43px;}
 a:hover {color:#fe9863;}
-.ctn-result1 {width: 615px; height: 335px; font: normal 18px 'Bangers', cursive; letter-spacing:0px; color:#fff;padding-top: 15px;padding-left: 0px;  float: left;margin-left: 75px; line-height: 24px;overflow:hidden;}
+.ctn-result1 {width: 615px; height: 335px; font: normal 16px 'Bangers', cursive; letter-spacing:0px; color:#fff;padding-top: 15px;padding-left: 0px;  float: left;margin-left: 75px; line-height: 22px;overflow:hidden;}
 .ctn-result2 {width: 103px; height: 280px; font: normal 44px 'Bangers', cursive; letter-spacing:0px; color:#fff;padding-top: 15px;padding-left: 33px; float: left; color:#fe9863;margin-top: 22px;top: 66px;}
 .tp {font-size:20px;}
 .clearit {clear:both;}
