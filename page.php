@@ -1,5 +1,4 @@
 <?php
-	require "system/connect.php";
 	session_start();
 	$_SESSION["nomor"]++;
 	
@@ -40,23 +39,96 @@
 			<form id="kuis" action="result.php" method="post">
 <?php } ?>
             <div class="question">
-<?php
-	$query_question = mysql_query("SELECT id, question FROM question WHERE id = ".$_SESSION["nomor"]);
-	while ($row_question = mysql_fetch_array($query_question)) {
-		echo $row_question['question'];
-	}
-?>
+			<?php
+				if($_SESSION["nomor"] == 1) echo "SAYA ADALAH ORANG YANG";
+				else if($_SESSION["nomor"] == 2) echo "SAYA TERBIASA";
+				else if($_SESSION["nomor"] == 3) echo "SAYA SUKA";
+				else if($_SESSION["nomor"] == 4) echo "SAYA ADALAH ORANG YANG MENYUKAI";
+				else if($_SESSION["nomor"] == 5) echo "SAYA BERORIENTASI PADA";
+				else if($_SESSION["nomor"] == 6) echo "SAYA ADALAH ORANG YANG";
+				else if($_SESSION["nomor"] == 7) echo "SAYA ADALAH ORANG YANG";
+				else if($_SESSION["nomor"] == 8) echo "SAYA ADALAH ORANG YANG";
+				else if($_SESSION["nomor"] == 9) echo "SAYA ADALAH ORANG YANG";
+				else if($_SESSION["nomor"] == 10) echo "SAYA ADALAH ORANG YANG";
+				else if($_SESSION["nomor"] == 11) echo "SAYA ADALAH ORANG YANG";
+				else if($_SESSION["nomor"] == 12) echo "SAYA ADALAH ORANG YANG";
+			?>
 				<br />
                     <div class="radio">
-<?php
-	$query_answer = mysql_query("SELECT id, id_question, answer, description FROM answer WHERE id_question = ".$_SESSION["nomor"]);
-	while ($row_answer = mysql_fetch_array($query_answer)) {
-?>
-                        <input id="<?=$row_answer['id'];?>" type="radio" name="answer" value="<?=$row_answer['description'];?>" required>
-                        <label for="<?=$row_answer['id'];?>"><?=$row_answer['answer'];?></label><br />
-<?php
-	}
-?>
+					<?php if($_SESSION["nomor"] == 1){ ?>
+                        <input id="1" type="radio" name="answer" value="E" required>
+                        <label for="1">Mempunyai banyak teman</label><br />
+                        <input id="2" type="radio" name="answer" value="I" required>
+                        <label for="2">Hanya berteman dengan orang-orang tertentu</label><br />
+					<?php
+						}else if($_SESSION["nomor"] == 2){ ?>
+                        <input id="3" type="radio" name="answer" value="E" required>
+                        <label for="3">Mengemukakan pendapat</label><br />
+                        <input id="4" type="radio" name="answer" value="I" required>
+                        <label for="4">Menyimpan pemikiran saya</label><br />
+					<?php
+						}else if($_SESSION["nomor"] == 3){ ?>
+                        <input id="5" type="radio" name="answer" value="E" required>
+                        <label for="5">Mencari kegiatan</label><br />
+                        <input id="6" type="radio" name="answer" value="I" required>
+                        <label for="6">Mencari waktu yang tenang</label><br />
+					<?php
+						}else if($_SESSION["nomor"] == 4){ ?>
+                        <input id="7" type="radio" name="answer" value="S" required>
+                        <label for="7">Rutinitas</label><br />
+                        <input id="8" type="radio" name="answer" value="N" required>
+                        <label for="8">Kegiatan yang variatif</label><br />
+					<?php
+						}else if($_SESSION["nomor"] == 5){ ?>
+                        <input id="9" type="radio" name="answer" value="S" required>
+                        <label for="9">Kenyataan saat ini</label><br />
+                        <input id="10" type="radio" name="answer" value="N" required>
+                        <label for="10">Apa yang akan terjadi diwaktu mendatang</label><br />
+					<?php
+						}else if($_SESSION["nomor"] == 6){ ?>
+                        <input id="11" type="radio" name="answer" value="S" required>
+                        <label for="11">Konsisten</label><br />
+                        <input id="12" type="radio" name="answer" value="N" required>
+                        <label for="12">Mudah berubah, tergantung situasi</label><br />
+					<?php
+						}else if($_SESSION["nomor"] == 7){ ?>
+                        <input id="13" type="radio" name="answer" value="T" required>
+                        <label for="13">Logis dan realistis</label><br />
+                        <input id="14" type="radio" name="answer" value="F" required>
+                        <label for="14">Mudah terbawa suasana</label><br />
+					<?php
+						}else if($_SESSION["nomor"] == 8){ ?>
+                        <input id="15" type="radio" name="answer" value="T" required>
+                        <label for="15">Adil</label><br />
+                        <input id="16" type="radio" name="answer" value="F" required>
+                        <label for="16">Murah hati</label><br />
+					<?php
+						}else if($_SESSION["nomor"] == 9){ ?>
+                        <input id="17" type="radio" name="answer" value="T" required>
+                        <label for="17">Mengemukakan segala sesuatu apa adanya</label><br />
+                        <input id="18" type="radio" name="answer" value="F" required>
+                        <label for="18">Menyelaraskan diri dengan orang-orang disekitar saya</label><br />
+					<?php
+						}else if($_SESSION["nomor"] == 10){ ?>
+                        <input id="19" type="radio" name="answer" value="J" required>
+                        <label for="19">Tegas dalam mengambil keputusan</label><br />
+                        <input id="20" type="radio" name="answer" value="P" required>
+                        <label for="20">Berhati-hati dalam mengambil keputusan</label><br />
+					<?php
+						}else if($_SESSION["nomor"] == 11){ ?>
+                        <input id="21" type="radio" name="answer" value="J" required>
+                        <label for="21">Mudah mengambil keputusan</label><br />
+                        <input id="22" type="radio" name="answer" value="P" required>
+                        <label for="22">Terbuka dan menerima masukan</label><br />
+					<?php
+						}else if($_SESSION["nomor"] == 12){ ?>
+                        <input id="23" type="radio" name="answer" value="J" required>
+                        <label for="23">Terencana</label><br />
+                        <input id="24" type="radio" name="answer" value="P" required>
+                        <label for="24">Spotan</label><br />
+					<?php
+						}
+					?>
                     </div> 
             </div>
 <?php

@@ -396,7 +396,7 @@
 	  <div style="width:810px;">	
           <div class="ctn-share">Share Your Result:</div>
           <div class="sharefbt">
-			<a href="#" onclick="window.open('http://www.facebook.com/sharer.php?s=100&p[title]=tes_karir&p[summary]=ngene_deskripsine&p[url]=muincik', 'newwindow', 'width=640, height=300');">
+			<a href="#" onclick="window.open('http://www.facebook.com/sharer.php?s=100&p[title]=Kompas_Karier_Fair&p[summary]=Sifat_Profesi&p[url]=https://www.facebook.com/JobsKompascom', 'newwindow', 'width=640, height=300');">
 				<img src="images/ico_fb.gif" />
 			</a>
 		  </div>
