@@ -1,0 +1,16 @@
+<questions>
+	<question>
+		<id>1</id>
+		<soal>SAYA ADALAH ORANG YANG</soal>
+		<answers>
+			<answer>
+				<sifat>E</sifat>
+				<jawab>Mempunyai banyak teman</jawab>
+			</answer>
+			<answer>
+				<sifat>I</sifat>
+				<jawab>Hanya berteman dengan orang-orang tertentu</jawab>
+			</answer>
+		</answers>
+	</question>
+</questions>

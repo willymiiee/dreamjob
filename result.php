@@ -2,10 +2,10 @@
 	session_start();
 	if (isset($_POST['hasil']))
 		$_SESSION["jawaban"] = $_SESSION["jawaban"] . $_POST['answer'];
-	else {
-		header("Location: index.php");
-		die();
-	}
+	// else {
+		// header("Location: index.php");
+		// die();
+	// }
 
 	if (substr_count($_SESSION["jawaban"], 'E') >= 2)
 		$sifat = "E";
@@ -394,10 +394,10 @@
 				<img src="images/ico_fb.gif" />
 			</a>
 		  </div>
-		  <div class="sharefbt"><a href="https://twitter.com/intent/tweet?button_hashtag=KompasKarierFair&text=Aku%20bisa%20tahu%20sifat%20kepribadianku%20dan%20profesi%20yang%20cocok%20di%20Kompas%20Karier%20Fair.%20Bagaimana%20dengan%20kamu%3F"><img src="images/ico_tw.gif" /></a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>  </div>
+		  <div class="sharefbt"><a href="https://twitter.com/intent/tweet?button_hashtag=DigitalBanget&text=Dari%20hasil%20tes%2C%20tipe%20kepribadianku%20<?=$sifat;?>%20dan%20aku%20tau%20profesi%20yg%20sesuai%20kepribadianku%2C%20bagaimana%20dgn%20kamu%3F%20%40JobsKompascom"><img src="images/ico_tw.gif" /></a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>  </div>
           <div class="balik"><a href="index.php">Back To Start  <i class="fa fa-chevron-circle-right"></i></a> </div>
           <div class="clearit"></div>
-      </div>        
+      </div>
     </div>
 </body>
 </html>

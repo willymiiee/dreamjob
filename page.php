@@ -12,6 +12,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet">
 <link href="fs/css/font-awesome.css" rel="stylesheet">
+<script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
 <title>Tes Digital</title>
 
 </head>
@@ -36,7 +37,7 @@
 <?php if($_SESSION["nomor"] != 12) { ?>
 			<form method="post">
 <?php } else { ?>
-			<form action="result.php" method="post">
+			<form id="kuis" action="result.php" method="post">
 <?php } ?>
             <div class="question">
 <?php
@@ -66,7 +67,7 @@
 <?php
 	} else {
 ?>
-			<Input class="nxf" type="Submit" Name="hasil" Value="FINISH">
+			<Input id="finish" class="nxf" type="Submit" Name="hasil" Value="FINISH">
 <!--            <div class="nxf"><a href="#">FINISH <i class="fa fa-chevron-circle-right"></i></a> </div> -->
 <?php
 	}
@@ -74,5 +75,16 @@
 		</form>
         </div>
     </div>
+<script type="text/javascript">
+	$( "#kuis" ).submit(function( event ) {
+	  alert( "Handler for .submit() called." );
+	  var form = this;
+	  event.preventDefault();
+	  setTimeout(function() {
+			// $.post( "result.php", $( "#kuis" ).serialize() );
+			form.submit();
+	  }, 5000);
+	});	
+</script>
 </body>
 </html>
