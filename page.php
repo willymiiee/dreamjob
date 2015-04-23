@@ -159,7 +159,7 @@
 	  setTimeout(function() {
 			// $.post( "result.php", $( "#kuis" ).serialize() );
 			form.submit();
-	  }, 5000);
+	  }, 8000);
 	});	
 </script>
 </body>
